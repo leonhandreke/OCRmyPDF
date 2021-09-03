@@ -80,6 +80,7 @@ def rasterize_pdf(
             f'-sDEVICE={raster_device}',
             f'-dFirstPage={pageno}',
             f'-dLastPage={pageno}',
+            '-dUseCropBox',
             f'-r{raster_dpi.x:f}x{raster_dpi.y:f}',
         ]
         + (['-dFILTERVECTOR'] if filter_vector else [])
